@@ -1,6 +1,6 @@
 package com.bankapplication.AccountMicroservice.controller;
 
-import com.bankapplication.AccountMicroservice.Services.Interfaces.AccountService;
+import com.bankapplication.AccountMicroservice.services.Interfaces.AccountService;
 import com.bankapplication.AccountMicroservice.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -46,6 +46,8 @@ public class AccountController {
         return new ResponseEntity<>(status,HttpStatus.OK);
 
     }
+
+
 
 }
 

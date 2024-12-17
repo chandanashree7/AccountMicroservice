@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 @Table(name="account")
 public class Account {
 
+
+        private Long userId;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long account_Id;
@@ -17,8 +19,13 @@ public class Account {
         private String account_type;
         private double balance;
         private String currency;
-        private LocalDateTime created_at;
+        private LocalDateTime createdAt;
 
+        @PrePersist
+        public void prePersist() {
+                if(createdAt==null)
+                 createdAt = LocalDateTime.now(); // Set current date and time before saving
+        }
 
-    }
+}
 
