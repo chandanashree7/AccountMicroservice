@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank?createDatabaseIfNotExist=true&useSSL=true
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Automatically updates schema
+    show-sql: true # Prints SQL queries in logs
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8081 # Account microservice runs on port 8081
+
