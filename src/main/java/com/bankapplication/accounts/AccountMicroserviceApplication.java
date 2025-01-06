@@ -1,4 +1,4 @@
-package com.bankapplication.AccountMicroservice;
+package com.bankapplication.accounts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,11 +1,13 @@
-package com.bankapplication.AccountMicroservice.DTO;
+package com.bankapplication.accounts.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-public class UserDTO {
+
+public class UserProfile implements Serializable {
 
     private Long userId;
     private String username;

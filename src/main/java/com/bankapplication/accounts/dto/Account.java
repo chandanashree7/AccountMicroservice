@@ -1,4 +1,4 @@
-package com.bankapplication.AccountMicroservice.model;
+package com.bankapplication.accounts.dto;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -10,16 +10,16 @@ import java.time.LocalDateTime;
 @Table(name="account")
 public class Account {
 
-
-        private Long userId;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long account_Id;
-        private String account_number;
-        private String account_type;
+        private Long accountId;
+        private String accountNumber;
+        private String accountType;
         private double balance;
         private String currency;
         private LocalDateTime createdAt;
+        private Long userId;
+
 
         @PrePersist
         public void prePersist() {
